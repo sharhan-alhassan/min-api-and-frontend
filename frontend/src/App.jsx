@@ -162,8 +162,9 @@ function App() {
   const intentList = useMemo(() => Object.entries(intents), [intents]);
 
   return (
-    <div className="min-h-screen px-4 pb-10">
-      <header className="max-w-5xl mx-auto py-10">
+    <div className="h-screen overflow-hidden">
+      <div className="max-w-7xl mx-auto h-full flex flex-col px-4">
+        <header className="pt-8 pb-4">
         <p className="text-xs uppercase tracking-[0.4em] text-sky-200/70 mb-2">
           Mini ChatGPT
         </p>
@@ -175,10 +176,10 @@ function App() {
           canned responses—so you can see the skeleton of how LLM prompts feel
           without any black box.
         </p>
-      </header>
+        </header>
 
-      <main className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-6">
-        <section className="bg-panel/80 backdrop-blur rounded-2xl border border-white/5 shadow-xl shadow-black/30">
+      <main className="flex-1 grid grid-cols-1 lg:grid-cols-[2.6fr_1.4fr] gap-6 min-h-0">
+        <section className="bg-panel/80 backdrop-blur rounded-2xl border border-white/5 shadow-xl shadow-black/30 flex flex-col min-h-0">
           <div className="px-6 py-4 border-b border-white/5 flex items-center justify-between">
             <div>
               <h2 className="text-lg font-semibold text-white">Chat</h2>
@@ -192,7 +193,7 @@ function App() {
             </div>
           </div>
 
-          <div className="px-6 py-6 space-y-4 h-[60vh] overflow-y-auto">
+          <div className="px-6 py-6 space-y-4 flex-1 overflow-y-auto min-h-0">
             {!historyLoaded && (
               <div className="flex justify-center pt-6">
                 <LoadingDots />
@@ -248,7 +249,7 @@ function App() {
           </div>
         </section>
 
-        <aside className="space-y-6">
+        <aside className="space-y-6 min-h-0 overflow-y-auto pb-2">
           <div className="bg-panel/80 backdrop-blur rounded-2xl border border-white/5 p-5">
             <h3 className="text-white font-semibold mb-2">Bot reasoning</h3>
             <p className="text-sm text-gray-400 mb-4">
@@ -322,6 +323,7 @@ function App() {
           </div>
         </aside>
       </main>
+      </div>
     </div>
   );
 }
