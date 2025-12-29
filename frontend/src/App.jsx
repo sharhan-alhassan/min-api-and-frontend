@@ -169,12 +169,11 @@ function App() {
           Mini ChatGPT
         </p>
         <h1 className="text-3xl md:text-4xl font-semibold text-white mb-4">
-          Rule-based chatbot that explains how it “thinks”
+          Rule-based chatbot that demostrates how AI "thinks"
         </h1>
         <p className="text-gray-300 max-w-3xl">
-          No API keys. No magic. We simply match keywords to intents and return
-          canned responses—so you can see the skeleton of how LLM prompts feel
-          without any black box.
+         Simply match keywords to intents and return
+          canned responses— See the skeleton of how LLM prompts feel
         </p>
         </header>
 
